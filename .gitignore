@@ -1,6 +1,6 @@
 *.exe
 *.class
 /.vscode
-tempCodeRunnerFile.c
-tempCodeRunnerFile.java
+tempCodeRunnerFile.*
 test.*
+hello.c

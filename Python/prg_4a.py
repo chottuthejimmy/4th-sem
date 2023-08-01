@@ -41,9 +41,7 @@ def merge_sort(list):
             list[k] = right[j]
             j += 1
             k += 1
-
-    else:
-        return list
+            
     return list
 
 my_list = []

@@ -1,5 +1,5 @@
 """
-Question: Write a program to convert roman numbers in to integer values using dictionaries.
+Question: Write a program to convert roman numbers into integer values using dictionaries.
 """
 
 def rom2int(str):

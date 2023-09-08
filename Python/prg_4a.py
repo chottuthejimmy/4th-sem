@@ -52,8 +52,3 @@ for x in range(n):
 ins_list = my_list.copy()
 mrg_list = my_list.copy()
 print("List before sorting: {}\nAfter using insertion sort: {}\nAfter using merge sort: {}".format(my_list, insert_sort(ins_list), merge_sort(mrg_list)))
-
-
-
-  
-

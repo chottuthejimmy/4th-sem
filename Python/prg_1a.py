@@ -13,4 +13,4 @@ elif m2<=m1 and m2<=m3:
     avg = (m1+m3)/2
 else:
     avg = (m1+m2)/2
-print("The best average score obtained is: ",avg)
+print("The best average score obtained is:",avg)

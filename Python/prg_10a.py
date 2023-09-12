@@ -1,6 +1,5 @@
 """
-Write a python program to combine select pages from many PDFs.
-from PyPDF2 import PdfWriter, PdfReader
+Write a python program to combine select pages from many PDFs from PyPDF2 import PdfWriter, PdfReader
 """
 
 from PyPDF2 import PdfWriter, PdfReader

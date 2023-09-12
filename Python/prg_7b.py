@@ -16,7 +16,7 @@ class Employee:
         self.salary = int(input("Enter Employee Salary : "))
         
     def show_emp_details(self):
-        print("Employee Details")
+        print("\nEmployee Details")
         print("Name :", self.name)
         print("ID :", self.empId)
         print("Dept :", self.dept)
@@ -24,7 +24,7 @@ class Employee:
         
     def update_salary(self):
         self.salary = int(input("Enter new Salary : "))
-        print("Updated Salary", self.salary)
+        print("\nUpdated Salary", self.salary)
 
 e = Employee()
 e.get_emp_details()

@@ -1,6 +1,5 @@
 """
-By using the concept of inheritance write a python program to find the area of triangle,
-circle and rectangle.
+By using the concept of inheritance write a python program to find the area of triangle, circle and rectangle.
 """
 
 import math
@@ -11,11 +10,10 @@ class Shape:
         self.name = ""
 
     def show_area(self):
-        print(f"The are of the {self.name} is {self.area} square units")
+        print(f"The area of the {self.name} is {self.area} square units")
 
 class Circle(Shape):
     def __init__(self, radius):
-        self.area = 0
         self.name = "Circle"
         self.radius = radius
 
@@ -24,7 +22,6 @@ class Circle(Shape):
 
 class Triangle(Shape):
     def __init__(self, base, height):
-        self.area = 0
         self.name = "Triangle" 
         self.base = base
         self.height = height
@@ -34,7 +31,6 @@ class Triangle(Shape):
 
 class Rectangle(Shape):
     def __init__(self, length, breadth):
-        self.area = 0
         self.name = "Rectangle" 
         self.length = length
         self.breadth = breadth

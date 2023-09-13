@@ -11,7 +11,7 @@ with open('weather_data.json') as f:
 # Extract the required weather data
 current_temp = data['main']['temp']
 humidity = data['main']['humidity']
-weather_desc = data['weather'][0]['description']
+weather_desc = data['weather']['description']
 
 # Display the weather data
 print(f"Current temperature: {current_temp}°C")

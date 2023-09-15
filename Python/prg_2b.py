@@ -19,7 +19,7 @@ def oct2hex(num):
             hexa = str(rem) + hexa
         else:
             hexa = chr(ord('A') + rem-10) + hexa
-        dec//=16
+        dec //= 16
     return hexa
 
 n1 = input("Enter a binary number: ")

@@ -11,7 +11,7 @@ pdf2 = open('3.pdf', 'rb')
 
 pdf_writer = PdfWriter()
 
-pdf_writer.add_page(PdfReader(pdf1).pages[num - 1]) 
+pdf_writer.add_page(PdfReader(pdf1).pages[num - 1])
 pdf_writer.add_page(PdfReader(pdf2).pages[num - 1])
 
 with open('output.pdf', 'wb') as output:

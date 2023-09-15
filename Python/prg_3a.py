@@ -8,7 +8,7 @@ word_count = sentence.split(" ") # We need to count no of words and NOT no of ch
 digit_count = upper_count = lower_count = 0
 for char in sentence:
     if '0' <= char <= '9':
-        digit_count += 1
+        digit_count += 1 
     elif 'A' <= char <= 'Z':
         upper_count += 1
     else:

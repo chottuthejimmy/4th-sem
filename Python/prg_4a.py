@@ -47,7 +47,7 @@ def merge_sort(list):
 my_list = []
 n = int(input("Enter the size of the list: "))
 for x in range(n):
-    my_list.append(int(input("Enter the {} element: ".format(x+1))))
+    my_list.append(int(input(f"Enter the {x+1} element: ")))
 
 ins_list = my_list.copy()
 mrg_list = my_list.copy()

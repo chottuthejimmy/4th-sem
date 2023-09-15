@@ -13,7 +13,6 @@ def f(n):
 
 n = int(input("Enter the value of n: "))
 if n>0:
-    print("f(",n,") = ",f(n), sep='') # the o/p needs to look like f(2) = 1 
-        # so the spliting needs to be done this way | f( | and then insert the value 'n' | )= | , default sep is space hence we change that to none
+    print(f"f({n}) = {f(n)}")
 else:
     print("Error in input")

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Hello</title>
+
+</head>
+
+<body>
+    <input type="text" id="titletxt">
+    <button onclick="Submit()">Submit</button>
+    <script>
+        function loadTitle() {
+            const queryString = window.location.search;
+            const name = new URLSearchParams(queryString).get("name");
+            if (name) {
+                document.body.innerHTML = "<h2>Hello " + name + "</h2>";
+                document.title = "Welcome " + name;
+            }
+        }
+        document.body.onload = loadTitle;
+
+        function Submit() {
+let name = document.getElementById("titletxt").value;
+            window.location.search = "?name=" + name;
+        }
+    </script>
+</body>
+
+</html>  

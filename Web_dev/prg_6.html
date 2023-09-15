@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Web Programing- Program 6</title>
+    <script type="text/javascript">
+        // Problem a) Display Date
+        function displayDate() {
+            var currentDate = new Date();
+            var dateTextbox = document.getElementById("dateTextbox");
+            dateTextbox.value = currentDate.toDateString();
+        }
+
+        // Problem b) Factorial
+        function calculateFactorial() {
+            var n = prompt("Enter a number to calculate its factorial:");
+            if (n !== null) {
+                n = parseInt(n);
+                if (!isNaN(n)) {
+                    var factorial = 1;
+                    for (var i = 1; i <= n; i++) {
+                        factorial *= i;
+                    }
+                    alert("Factorial of " + n + " is " + factorial);
+                } else {
+                    alert("Invalid input. Please enter a valid number.");
+                }
+            }
+        }
+
+        // Problem c) Fibonacci Numbers
+        function generateFibonacci() {
+            var n = prompt("Enter the number of Fibonacci numbers to generate:");
+            if (n !== null) {
+                n = parseInt(n);
+                if (!isNaN(n) && n > 0) {
+                    var fibonacciNumbers = [];
+                    if (n >= 1) {
+                        fibonacciNumbers.push(0);
+                    }
+                    if (n >= 2) {
+                        fibonacciNumbers.push(1);
+                    }
+                    for (var i = 2; i < n; i++) {
+                        var nextFibonacci = fibonacciNumbers[i - 1] + fibonacciNumbers[i - 2];
+                        fibonacciNumbers.push(nextFibonacci);
+                    }
+                    alert("First " + n + " Fibonacci numbers: " + fibonacciNumbers.join(", "));
+                } else {
+                    alert("Invalid input. Please enter a positive integer.");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Web Programing- Program 6</h1>
+    <button onclick="displayDate()">Display Date</button>
+    <input type="text" id="dateTextbox" readonly="readonly" />
+    <br />
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <br />
+    <button onclick="generateFibonacci()">Generate Fibonacci Numbers</button>
+</body>
+</html>

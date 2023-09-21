@@ -30,7 +30,7 @@ while True:
         img_file = open(os.path.join('xkcd_comics', os.path.basename(comic_url)), 'wb')
         for chunk in res.iter_content(1):
             img_file.write(chunk)
-        img_file.close() 
+        img_file.close()
 
         pre_link = soup.select('a[rel="prev"]')[0]
         if not pre_link:

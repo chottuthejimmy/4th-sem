@@ -37,7 +37,6 @@ sheet.cell(row = 1, column = 1).value = "State"
 sheet.cell(row = 1, column = 2).value = "Capital"
 sheet.cell(row = 1, column = 3).value = "Code"
 
-ft = Font(bold = True)
 for row in sheet['A1:C1']:
     for cell in row:
         cell.font = ft

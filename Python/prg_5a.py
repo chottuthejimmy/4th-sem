@@ -19,7 +19,7 @@ def isphonenumber(num): # Without using regular expression
 def isphonenumber_regex(num): # Using regular expression
     ph_no_pattern = re.compile(r'^\d{3}-\d{3}-\d{4}$')
     return bool(ph_no_pattern.match(num))
- 
+
 n = input("Enter a phone number: ")
 print("Without regular expression: ",end='')
 if isphonenumber(n):

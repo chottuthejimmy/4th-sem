@@ -1,64 +1,55 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <title>Web Programing- Program 6</title>
-    <script type="text/javascript">
-        // Problem a) Display Date
-        function displayDate() {
-            var currentDate = new Date();
-            var dateTextbox = document.getElementById("dateTextbox");
-            dateTextbox.value = currentDate.toDateString();
-        }
+<title>Program 6</title>
+<script>
+// Problem a) Display Date
+function displayDate() {
+const dateTextbox = document.getElementById('dateTextbox');
+dateTextbox.value = new Date().toDateString();
+}
+// Problem b) Factorial
+function calculateFactorial() {
+  const n = +prompt('Enter a number:');
+  let factorial = 1;
+  if (isNaN(n) || n <= 0) {
+    alert("Invalid input. Please enter a positive number.");
+    return;
+  }
+  for (let i = 2; i <= n; i++) {
+    factorial *= i;
+  }
+  alert("Factorial of "+n+ "is "+factorial);
+}
+// Problem c) Fibonacci Numbers
+function generateFibonacci() {
+  const n = +prompt("Enter the number of Fibonacci numbers to generate:");
 
-        // Problem b) Factorial
-        function calculateFactorial() {
-            var n = prompt("Enter a number to calculate its factorial:");
-            if (n !== null) {
-                n = parseInt(n);
-                if (!isNaN(n)) {
-                    var factorial = 1;
-                    for (var i = 1; i <= n; i++) {
-                        factorial *= i;
-                    }
-                    alert("Factorial of " + n + " is " + factorial);
-                } else {
-                    alert("Invalid input. Please enter a valid number.");
-                }
-            }
-        }
+  if (isNaN(n) || n <= 0) {
+    alert("Invalid input. Please enter a positive number.");
+    return;
+  }
 
-        // Problem c) Fibonacci Numbers
-        function generateFibonacci() {
-            var n = prompt("Enter the number of Fibonacci numbers to generate:");
-            if (n !== null) {
-                n = parseInt(n);
-                if (!isNaN(n) && n > 0) {
-                    var fibonacciNumbers = [];
-                    if (n >= 1) {
-                        fibonacciNumbers.push(0);
-                    }
-                    if (n >= 2) {
-                        fibonacciNumbers.push(1);
-                    }
-                    for (var i = 2; i < n; i++) {
-                        var nextFibonacci = fibonacciNumbers[i - 1] + fibonacciNumbers[i - 2];
-                        fibonacciNumbers.push(nextFibonacci);
-                    }
-                    alert("First " + n + " Fibonacci numbers: " + fibonacciNumbers.join(", "));
-                } else {
-                    alert("Invalid input. Please enter a positive integer.");
-                }
-            }
-        }
-    </script>
+  let a = 0, b = 1, temp;
+  let fibonacci = [a, b];
+
+  for (let i = 2; i < n; i++) {
+    temp = a + b;
+    a = b;
+    b = temp;
+    fibonacci.push(temp);
+  }
+  alert("First "+n+ "Fibonacci numbers: "+fibonacci.join(", "));
+}
+</script>
 </head>
 <body>
-    <h1>Web Programing- Program 6</h1>
-    <button onclick="displayDate()">Display Date</button>
-    <input type="text" id="dateTextbox" readonly="readonly" />
-    <br />
-    <button onclick="calculateFactorial()">Calculate Factorial</button>
-    <br />
-    <button onclick="generateFibonacci()">Generate Fibonacci Numbers</button>
+<h1>Web Programing- Program 6</h1>
+<button onclick="calculateFactorial()">Display Date</button>
+<input type="text" id="dateTextbox" readonly>
+<br><br>
+<button onclick="calculateFactorial()">Calculate Factorial</button>
+<br><br>
+<button onclick="generateFibonacci()">Generate Fibonacci</button>
 </body>
 </html>

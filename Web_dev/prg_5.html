@@ -1,29 +1,16 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-    <title>Hello</title>
-
-</head>
-
-<body>
-    <input type="text" id="titletxt">
-    <button onclick="Submit()">Submit</button>
-    <script>
-        function loadTitle() {
-            const queryString = window.location.search;
-            const name = new URLSearchParams(queryString).get("name");
-            if (name) {
-                document.body.innerHTML = "<h2>Hello " + name + "</h2>";
-                document.title = "Welcome " + name;
-            }
-        }
-        document.body.onload = loadTitle;
-
-        function Submit() {
-let name = document.getElementById("titletxt").value;
-            window.location.search = "?name=" + name;
-        }
+  <head>
+    <title>greet</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const name = prompt("enter name");
+      if(name){
+        document.write("hello, " + name);
+      }
+      else
+      document.write("hello, anonymous");
     </script>
-</body>
-
-</html>  
+  </body>
+</html>

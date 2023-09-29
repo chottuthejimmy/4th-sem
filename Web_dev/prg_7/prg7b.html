@@ -1,52 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
- <head>
- <title> USN validator </title>
- <script type="text/javascript">
-function formValidator()
-{
-var usn = document.getElementById('usnFrm');
-var sem = document.getElementById('semFrm');
-usnExp=/[1-4][A-Z][A-Z]\d{2}[A-Z][A-Z]\d{3}$/
-semExp=/^([1-8])$/
-if(usn.value.length==0)
-{
-alert("USN is empty.");
-usn.focus();
-return false;
-}
-else if(!usn.value.match(usnExp))
-{ 
-alert("USN should be in VTU USN format, eg., 1JS21CS001");
-usn.focus();
-return false;
- } 
-else if(sem.value.length==0)
-{
-alert("Semester field is empty.");
-sem.focus();
-return false;
-}
-else if(!sem.value.match(semExp))
- { 
-alert("Semester number should be from 1 to 8");
-sem.focus();
-return false;
- } 
-alert("USN: "+usn.value+"\n Semester: "+sem.value);
-return true;
+<!DOCTYPE html>
+<html>
+<head>
+<title>USN and Semester Form</title>
+<script type="text/javascript">
+function validateUSNAndSemester() {
+  var usnInput = document.getElementById("usn").value;
+  var semesterInput = parseInt(document.getElementById("semester").value);
+  var usnPattern = /^[1-4][A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+  if (usnPattern.test(usnInput) && semesterInput) {
+    alert("USN and Semester are valid:\nUSN: " + usnInput + "\nSemester: " + semesterInput);
+  } else if (!usnPattern.test(usnInput)) {
+    alert("Invalid USN format. Please enter a valid USN.");
+  } else if (isNaN(semesterInput)) {
+    alert("Invalid Semester.");
+  }
 }
 </script>
- </head>
+</head>
 <body>
- <h1>Form validation using javascript</h1>
-<form onSubmit = "formValidator()">
-<p>Enter your VTU USN : <input type="text" id="usnFrm"/>
-</p>
-<p>Enter your current semester : <input type="text" id="semFrm"/>
-</p> 
-<input type ="submit" value="SUBMIT"/>
+<form>
+<label>Enter your USN: <input type="text" id="usn" name="usn" required></label>
+<br>
+<label>Enter your Semester (1-8): <input type="number" id="semester" name="semester" min="1" max="8" required></label>
+<br><hr>
+<button onclick="validateUSNAndSemester()">submit</button>
 </form>
 </body>
 </html>

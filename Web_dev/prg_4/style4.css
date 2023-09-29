@@ -1,0 +1,52 @@
+body {
+    font-family: Arial;
+    background-color: pearl;
+    color: black;
+  }
+  
+  header {
+    background-color: gray;
+    color: white;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: white;
+  }
+
+  th, td {
+	padding:10px;
+  text-align: left;
+}
+
+main {
+margin: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.frame {
+	background-color: silver;
+border:solid thin;
+flex-basis: 30%;
+padding: 10px;
+}
+
+footer {
+background-color: gray;
+color: white;
+padding: 10px;
+text-align: center;
+}  

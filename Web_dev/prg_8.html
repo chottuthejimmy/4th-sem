@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Paragraph Stacking </title>
-<style type="text/css">
-.para
-{
-border: solid thin black;
-padding:1cm;
-position:absolute;
-width:300px;
-}
-#layer1
-{
-background-color:yellow;
-top:200px; 
-left:400px;
-z-index:1;
-}
-#layer2
-{
-background-color:red;
-position:absolute;
-top:230px; 
-left:430px;
-z-index:2;
-}
-#layer3
-{
-background-color:blue;
-top:260px; left:460px;
-z-index:3;
-}
-</style>
-<script>
-var topLayer = "layer3";
-function mover(toTop) {
-var oldTop = document.getElementById(topLayer).style;
-var newTop = document.getElementById(toTop).style;
-oldTop.zIndex = 0;
-newTop.zIndex = 10;
-  }
-</script>
-</head>
-<body>
-<h3>Visibility of stacked paragraphs using Javascript</h3>
-<div id="layer1" class="para" onMouseOver="mover('layer1')">
-21CSL481 </div>
-<div id="layer2" class="para" onMouseOver="mover('layer2')">
-Web Programming Laboratory</div>
-<div id="layer3" class="para" onMouseOver="mover('layer3')">
-Experiment - Stacking of paragraphs</div>
-</body>
+  <head>
+    <title>Paragraph Stacking</title>
+    <style type="text/css">
+      .para {
+        border: solid thin black;
+        padding: 1cm;
+        position: absolute;
+        width: 300px;
+      }
+      #layer1 {
+        background-color: yellow;
+        top: 200px;
+        left: 400px;
+        z-index: 1;
+      }
+      #layer2 {
+        background-color: red;
+        top: 230px;
+        left: 430px;
+        z-index: 2;
+      }
+      #layer3 {
+        background-color: blue;
+        top: 260px;
+        left: 460px;
+        z-index: 3;
+      }
+    </style>
+    <script>
+      var topLayer = "layer3";
+      function mover(toTop) {
+        var oldTop = document.getElementById(topLayer).style;
+        var newTop = document.getElementById(toTop).style;
+        oldTop.zIndex = 0;
+        newTop.zIndex = 10;
+        topLayer = toTop;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Visibility of stacked paragraphs using Javascript</h3>
+    <div id="layer1" class="para" onMouseOver="mover('layer1')">21CSL481</div>
+    <div id="layer2" class="para" onMouseOver="mover('layer2')">
+      Web Programming Laboratory
+    </div>
+    <div id="layer3" class="para" onMouseOver="mover('layer3')">
+      Experiment - Stacking of paragraphs
+    </div>
+  </body>
 </html>

@@ -1,44 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
     <title>Popcorn Sales Order</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Popcorn Sales Order</h1>
     <form id="orderForm">
-        <label for="buyerName">Buyer's Name:</label>
-        <input type="text" id="buyerName" name="buyerName" required><br>
+      <label for="buyerName">Buyer's Name:</label>
+      <input type="text" id="buyerName" name="buyerName" required /><br />
 
-        <label for="buyerAddress">Address:</label>
-        <input type="text" id="buyerAddress" name="buyerAddress" required><br>
+      Address:
+      <input type="text" id="buyerAddress" name="buyerAddress" required /><br />
 
-        <label>Popcorn Options:</label><br>
-        <input type="checkbox" id="unpoppedPopcorn" name="popcorn" value="Unpopped Popcorn (1 lb) - $3.00">
-        <label for="unpoppedPopcorn">Unpopped Popcorn (1 lb) - $3.00</label><br>
+      <label>Popcorn Options:</label><br />
+      <input
+        type="checkbox"
+        id="unpoppedPopcorn"
+        name="popcorn"
+        value="Unpopped Popcorn (1 lb) - $3.00"
+      />
+      <label for="unpoppedPopcorn">Unpopped Popcorn (1 lb) - $3.00</label><br />
 
-        <input type="checkbox" id="caramelPopcorn" name="popcorn" value="Caramel Popcorn (2 lb. canister) - $3.50">
-        <label for="caramelPopcorn">Caramel Popcorn (2 lb. canister) - $3.50</label><br>
+      <input
+        type="checkbox"
+        id="caramelPopcorn"
+        name="popcorn"
+        value="Caramel Popcorn (2 lb. canister) - $3.50"
+      />
+      <label for="caramelPopcorn"
+        >Caramel Popcorn (2 lb. canister) - $3.50</label
+      ><br />
 
-        <input type="checkbox" id="caramelNutPopcorn" name="popcorn" value="Caramel Nut Popcorn (2 lb. canister) - $4.50">
-        <label for="caramelNutPopcorn">Caramel Nut Popcorn (2 lb. canister) - $4.50</label><br>
+      <input
+        type="checkbox"
+        id="caramelNutPopcorn"
+        name="popcorn"
+        value="Caramel Nut Popcorn (2 lb. canister) - $4.50"
+      />
+      <label for="caramelNutPopcorn"
+        >Caramel Nut Popcorn (2 lb. canister) - $4.50</label
+      ><br />
 
-        <input type="checkbox" id="toffeyNutPopcorn" name="popcorn" value="Toffey Nut Popcorn (2 lb. canister) - $5.00">
-        <label for="toffeyNutPopcorn">Toffey Nut Popcorn (2 lb. canister) - $5.00</label><br>
+      <input
+        type="checkbox"
+        id="toffeyNutPopcorn"
+        name="popcorn"
+        value="Toffey Nut Popcorn (2 lb. canister) - $5.00"
+      />
+      <label for="toffeyNutPopcorn"
+        >Toffey Nut Popcorn (2 lb. canister) - $5.00</label
+      ><br />
 
-        <label>Payment Method:</label><br>
-        <input type="radio" id="visa" name="paymentMethod" value="Visa">
-        <label for="visa">Visa</label><br>
+      <label>Payment Method:</label><br />
+      <input type="radio" id="visa" name="paymentMethod" value="Visa" />
+      <label for="visa">Visa</label><br />
 
-        <input type="radio" id="mastercard" name="paymentMethod" value="Mastercard">
-        <label for="mastercard">Mastercard</label><br>
+      <input
+        type="radio"
+        id="mastercard"
+        name="paymentMethod"
+        value="Mastercard"
+      />
+      <label for="mastercard">Mastercard</label><br />
 
-        <input type="radio" id="discover" name="paymentMethod" value="Discover">
-        <label for="discover">Discover</label><br>
+      <input type="radio" id="discover" name="paymentMethod" value="Discover" />
+      <label for="discover">Discover</label><br />
 
-        <button type="submit">Submit</button>
-        <button type="reset">Clear Order Form</button>
+      <button type="submit">Submit</button>
+      <button type="reset">Clear Order Form</button>
     </form>
-</body>
+  </body>
 </html>
